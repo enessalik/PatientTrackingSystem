@@ -1,0 +1,61 @@
+﻿@model IEnumerable<PatientTrackingSystem.Web.Models.Visit>
+
+@{
+	ViewData["Title"] = "Visits - Visits";
+}
+
+
+
+
+<div class="table-responsive">
+	<table class="table table-hover">
+		<thead>
+			<tr class="table-success">
+				<th>
+					Visit ID
+				</th>
+				<th>
+					Patient ID
+				</th>
+				<th>
+					Visit Date
+				</th>
+				<th>
+					Doctor
+				</th>
+				<th>
+					Complaint
+				</th>
+				<th>
+					Form Of Treatment
+				</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>
+						@item.Visit_Id
+					</td>
+					<td>
+						@item.Patient_Id
+					</td>
+					<td>
+						@item.Visit_Date
+					</td>
+					<td>
+						@item.Doctor
+					</td>
+					<td>
+						@item.Complaint
+					</td>
+					<td>
+						@item.Treatment
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

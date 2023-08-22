@@ -1,0 +1,60 @@
+﻿@model IEnumerable<PatientTrackingSystem.Web.Models.Patient>
+
+@{
+	ViewData["Title"] = "Patient - Index";
+}
+
+<h1>Patients</h1>
+
+<p style="text-align: right;">
+	<a asp-action="Create" class="btn btn-success">Create New</a>
+</p>
+<div class="table-responsive">
+	<table class="table table-hover">
+		<thead>
+			<tr class="table-success">
+				<th>
+					Id
+				</th>
+				<th>
+					ID Card
+				</th>
+				<th>
+					Name Surname
+				</th>
+				<th>
+					Birthday
+				</th>
+				<th>
+					Edit/Details/Delete
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>
+						@item.id
+					</td>
+					<td>
+						@item.id_card
+					</td>
+					<td>
+						@item.name_surname
+					</td>
+					<td>
+
+						@item.birthday.ToShortDateString()
+					</td>
+					<td>
+						<a asp-action="Edit" asp-route-id="@item.id" class="btn btn-primary">Edit</a>
+						<a asp-action="Details" asp-route-id="@item.id" class="btn btn-info">Details</a>
+						<a asp-action="Delete" asp-route-id="@item.id" class="btn btn-danger">Delete</a>
+						<a asp-controller="Visits" asp-action="Visits" asp-route-id="@item.id" class="btn btn-secondary">Visits</a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>

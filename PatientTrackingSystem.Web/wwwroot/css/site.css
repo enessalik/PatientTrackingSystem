@@ -1,0 +1,69 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-image: url(sbackground.jpg);
+    margin-bottom: 60px;
+}
+
+.table-responsive {
+    max-height: 700px;
+    background-color: white;
+}
+
+.table-responsive::-webkit-scrollbar {
+    width: 16px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 100px;
+}
+
+thead {
+    height: 55px;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* remove the gap so it doesn't close */
+}
+th {
+    position: sticky;
+    top: 0;
+}
+.image-container {
+    display: flex; /* Yan yana hizalama için flex kullanýyoruz */
+    justify-content: center; /* Resimleri ortalamak için */
+    min-height: 50vh;
+    align-items: center;
+    
+}
+
+.image-container img {
+    margin: 100px 100px 20px 100px; /* Resimler arasýndaki boþluðu ayarlamak için */
+    width: 200px;
+    height: 200px;
+}
+.bold-and-large {
+    font-weight: bold;
+    font-size: 50px;
+}

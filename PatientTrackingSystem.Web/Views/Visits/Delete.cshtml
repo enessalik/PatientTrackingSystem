@@ -1,0 +1,59 @@
+﻿@model PatientTrackingSystem.Web.Models.Visit
+
+@{
+    ViewData["Title"] = "Visits - Delete";
+}
+
+<center><h1>Visit</h1></center>
+<br>
+<h1>Delete</h1>
+<br>
+<div>
+    
+    
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Visit Id
+        </dt>
+        <dd class = "col-sm-10">
+            @Model.Visit_Id
+        </dd>
+        <dt class = "col-sm-2">
+            Patient ID
+        </dt>
+        <dd class = "col-sm-10">
+            @ViewBag.Patient_Id
+        </dd>
+        <dt class = "col-sm-2">
+            Visit Date
+        </dt>
+        <dd class = "col-sm-10">
+            @Model.Visit_Date
+        </dd>
+        <dt class = "col-sm-2">
+            Doctor
+        </dt>
+        <dd class = "col-sm-10">
+            @Model.Doctor
+        </dd>
+        <dt class = "col-sm-2">
+            Complaint
+        </dt>
+        <dd class = "col-sm-10">
+            @Model.Complaint
+        </dd>
+        <dt class = "col-sm-2">
+            Form Of Treatment
+        </dt>
+        <dd class = "col-sm-10">
+            @Model.Treatment
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Visit_Id" />
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        <input type="submit" value="Delete" class="btn btn-danger" /> 
+        
+    </form>
+</div>

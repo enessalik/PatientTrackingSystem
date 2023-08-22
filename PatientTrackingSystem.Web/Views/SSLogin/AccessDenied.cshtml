@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "_Layout2";
+}
+
+@section Scripts{
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        swal("Access Denied !!!", "You do not have access to this page!!!", "error").then(function(){
+                window.history.back();
+        });;
+
+    </script>
+}
+
+
